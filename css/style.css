@@ -1,0 +1,108 @@
+/*---------------------------------------------------------*/
+/* BASIC SETUP */
+/*---------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.nav-image {
+    max-width: 100%;
+}
+
+section {
+    padding: 30px 0;
+}
+
+.box {
+    padding: 20% 15%;
+    border: 1px solid #d4d4d4;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.box p:last-of-type {
+    margin-bottom: 15px;
+}
+
+.control-field {
+    margin-bottom: 15px;
+}
+
+.number-field {
+    width: 80%;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 70%;
+    background-color: #5ba718;
+    color: #fff;
+}
+
+.btn:disabled {
+    background-color: #d4d4d4;
+}
+
+.banner {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: none;
+}
+
+.pyro {
+    display: none;
+}
+
+.error {
+    color: #ea0909;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}

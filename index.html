@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/vendors/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/vendors/fireworks.css">
+    <link rel="stylesheet" type="text/css" href="css/vendors/loading.css">
+
+    <link rel="stylesheet" type="text/css" href="css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/queries.css">
+    <title>Guess The Number</title>
+</head>
+<body>
+<header>
+    <div class="row">
+        <a href="#">
+            <img class="nav-image" src="img/header_banner.png" alt="Banner image">
+        </a>
+    </div>
+</header>
+
+<div class="pyro" id="fireworks">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+
+<section>
+    <div class="row centered">
+        <div class="col span-1-of-3">
+            <div class="box" id="player-1-box">
+                <span class="banner active" id="player-1-banner"></span>
+                <p>Enter a number</p>
+                <p>between 0 and 100</p>
+                <form>
+                    <input type="text" class="control-field number-field" data-player="1" placeholder="Your guess">
+                    <button type="submit" class="control-field btn">Submit</button>
+                    <div class="lds-ellipsis hidden" id="player-1-loading">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col span-1-of-3">
+            <div class="box" id="player-2-box">
+                <span class="banner" id="player-2-banner"></span>
+                <p>Enter a number</p>
+                <p>between 0 and 100</p>
+                <form>
+                    <input type="text" class="control-field number-field" data-player="2" placeholder="Your guess">
+                    <button type="submit" class="control-field btn">Submit</button>
+                    <div class="lds-ellipsis hidden" id="player-2-loading">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col span-1-of-3">
+            <div class="box" id="player-3-box">
+                <span class="banner" id="player-3-banner"></span>
+                <p>Enter a number</p>
+                <p>between 0 and 100</p>
+                <form>
+                    <input type="text" class="control-field number-field" data-player="3" placeholder="Your guess">
+                    <button type="submit" class="control-field btn">Submit</button>
+                    <div class="lds-ellipsis hidden" id="player-3-loading">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
