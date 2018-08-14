@@ -1,4 +1,4 @@
-var endPoint = 'server/api.php';
+var endPoint = 'https://www.drukzo.nl.joao.hlop.nl/challenge.php';
 var forms = document.getElementsByTagName('form');
 
 for (var i = 0; i < forms.length; i++) {
@@ -45,9 +45,8 @@ function handleGuess(guess, player) {
 }
 
 function celebrate(player) {
-    document.getElementById('player-' + player + '-box').classList.add('animated', 'tada');
-    document.getElementById('fireworks').classList.add('active');
-    var banners = document.getElementsByClassName('banner')
+    document.getElementById('player-' + player + '-box').classList.add('win-animation');
+    var banners = document.getElementsByClassName('banner');
     var buttons = document.getElementsByClassName('btn');
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
@@ -64,13 +63,13 @@ function isNumberValid(num) {// Number need to be a valid integer in the inclusi
 function displayMessage(text, player, isError = false) {
     var element = document.getElementById('player-' + player + '-banner');
     element.innerText = text;
-    element.classList.add('animated', 'fadeIn', 'active');
+    element.classList.add('animation', 'fadeIn', 'active');
     if (isError) {
-        document.getElementById('player-' + player + '-box').classList.add('animated', 'shake');
+        document.getElementById('player-' + player + '-box').classList.add('error-animation');
         element.classList.add('error');
     }
     setTimeout(function () {
-        document.getElementById('player-' + player + '-box').classList.remove('animated', 'shake');
+        document.getElementById('player-' + player + '-box').classList.remove('error-animation');
     }, 1000);
 }
 
@@ -81,7 +80,7 @@ function hideMessage(player) {
 
 function toggleLoading(formContainer) {
     var btn = formContainer.getElementsByClassName('btn')[0];
-    var loading = formContainer.getElementsByClassName('lds-ellipsis')[0];
+    var loading = formContainer.getElementsByClassName('loading')[0];
     if (btn.classList.contains('hidden')) {
         btn.classList.remove('hidden');
         loading.classList.add('hidden');
